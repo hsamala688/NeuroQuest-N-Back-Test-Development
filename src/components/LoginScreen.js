@@ -1,14 +1,15 @@
-import React, { useState } from 'react';
+import React, { use, useState } from 'react';
 import { User } from 'lucide-react';
 
 const LoginScreen = ({ onLogin }) => {
   const [name, setName] = useState('');
   const [age, setAge] = useState('');
-
+  const [gender, setGender] = useState('');
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     if (name.trim() && age) {
-      onLogin(name.trim(), parseInt(age));
+      onLogin(name.trim(), parseInt(age), gender);
     }
   };
 
@@ -49,6 +50,22 @@ const LoginScreen = ({ onLogin }) => {
             max="120"
             required
           />
+        </div>
+
+        <div>
+          <label className="block text-left text-gray-700 text-xl font-semibold mb-2">
+            Gender Assigned at Birth
+          </label>
+          <select
+            value={gender}
+            onChange={(e) => setGender(e.target.value)}
+            className="w-full px-6 py-4 text-xl border-2 border-gray-300 rounded-xl focus:border-blue-500 focus:outline-none bg-white"
+            required
+          >
+            <option value="">Select gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
         </div>
 
         <button
