@@ -4,17 +4,13 @@ import { ArrowLeft } from 'lucide-react';
 const HistoryView = ({ userHistory, onBack }) => {
   return (
     <div className="space-y-6">
-      <div className="flex items-center gap-4">
-        <button
-          onClick={onBack}
-          className="flex items-center gap-2 px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded-xl transition-colors"
-        >
-          <ArrowLeft className="w-5 h-5" />
-          Back
-        </button>
-        <h2 className="text-3xl font-bold text-gray-800">Test History</h2>
-      </div>
-
+      <button
+        onClick={onBack}
+        className="flex items-center gap-2 text-gray-600 hover:text-gray-800 transition-colors"
+      >
+        <ArrowLeft className="w-5 h-5" />
+        <span className="text-lg">Back to Dashboard</span>
+      </button>
       {userHistory.length === 0 ? (
         <div className="bg-gray-50 rounded-2xl p-12 text-center border-2 border-gray-200">
           <p className="text-gray-600 text-xl">No test results yet. Take your first test!</p>

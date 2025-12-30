@@ -8,6 +8,7 @@ const Dashboard = ({ currentUser, onStartTest, onViewHistory, onLogout }) => {
         <div>
           <h2 className="text-2xl font-bold text-gray-800">Hello, {currentUser.name}!</h2>
           <p className="text-gray-600 text-lg">Age: {currentUser.age}</p>
+          <p className="text-gray-600 text-lg">Gender: {currentUser.gender}</p>
         </div>
         <button
           onClick={onLogout}

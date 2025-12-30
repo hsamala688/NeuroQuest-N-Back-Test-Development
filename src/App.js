@@ -102,7 +102,7 @@ const App = () => {
         )}
 
         {appState === 'playing' && (
-          <TestScreen onTestComplete={handleTestComplete} />
+          <TestScreen onTestComplete={handleTestComplete} onBack={handleBackToDashboard} />
         )}
 
         {appState === 'finished' && results && (
