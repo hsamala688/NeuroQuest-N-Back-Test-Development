@@ -32,15 +32,18 @@ NeuroQuest-N-Back-Test-Development/
 
 ## Getting Started
 
-1.)
+1:
+
 git clone https://github.com/hsamala688/NeuroQuest-N-Back-Test-Development.git
 
 cd NeuroQuest-N-Back-Test-Development
 
-2.)
+2:
+
 npm install
 
-3.)
+3:
+
 npm start
 
 The project will open at http://localhost:3000
